@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Client List</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>CNIC</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Example static row -->
+    <tr>
+      <td>Ali Khan</td>
+      <td>0300-1234567</td>
+      <td>12345-6789012-3</td>
+      <td>
+        <form action="/clients/delete/1" method="post" style="display:inline;">
+          <button type="submit">Delete</button>
+        </form>
+      </td>
+    </tr>
+    <!-- More rows will be dynamically added by backend -->
+  </tbody>
+</table>
+{% endblock %}
